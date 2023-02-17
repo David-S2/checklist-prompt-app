@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>  
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/clstask.js"></script>
+    <script src="js/live-task-list.js"></script>
+    <script src="js/shared-functions.js"></script>
+    <script src="js/clock.js"></script>
+    <title>Projection Checklist</title>
+</head>
+<body>
+    <div class="row">
+        <div class="col-lg-2 col-md-2 col-sm-3 col-xs-0"></div>
+        <div class="col-lg-8 col-md-8 col-sm-6 col-xs-12">
+            <h1 class="text-center">Projection Checklist</h1>
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-3 col-xs-12">
+            <h1 class="text-center align-text-bottom"><b id="clock">10:47</b></h1>
+        </div>
+    </div>
+    <hr />
+    <div class="row">
+        <div class="col-lg-3 col-md-2 col-sm-12 col-xs-12">
+            <div class="panel panel-info">
+                <div class="panel-heading text-center">
+                    <h5>Pending tasks</h5>
+                </div>
+                <div class="panel-body">
+                    <ul class="list-group" id="pendingList"></ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6 col-md-8 col-sm-12 col-xs-12">
+            <div class="panel panel-primary">
+                <div class="panel-heading text-center">
+                    <h4>Current tasks</h4>
+                </div>
+                <div class="panel-body">
+                    <ul class="list-group" id="activeList"></ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-2 col-sm-12 col-xs-12">
+            <div class="panel panel-success">
+                <div class="panel-heading text-center">
+                    <h5>Completed tasks</h5>
+                </div>
+                <div class="panel-body">
+                    <ul class="list-group" id="completeList"></ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        importTasks();
+        startTime();
+    </script>
+</body>
+</html>

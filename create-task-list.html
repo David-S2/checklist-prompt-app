@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head> 
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/clscreatetask.js"></script>
+    <script src="js/create-task-list.js"></script>
+    <script src="js/shared-functions.js"></script>
+    <script src="js/default-task-lists.js"></script>
+    <style>.col-form-label{padding-top: calc(.375rem + 1px);}</style>
+    <title>Create Checklist</title>
+</head>
+<body>
+    <div id="startModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title text-center">Select base task list:</h4>
+                </div>
+                <div class="modal-body">
+                    <button class="btn btn-primary btn-block" id="stdLiv">Standard format, live preach</button>
+                    <button class="btn btn-primary btn-block" id="stdVid">Standard format, video preach</button>
+                    <button class="btn btn-primary btn-block" id="sumLiv">Summer format, live preach</button>
+                    <button class="btn btn-primary btn-block" id="sumVid">Summer format, video preach</button>
+                    <button class="btn btn-primary btn-block" id="newList">Blank</button>
+                    <button class="btn btn-primary btn-block" id="prevList">Previous</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="newAction" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title text-center">Create New Task</h4>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group row">
+                            <label class="col-lg-3 col-md-3 col-sm-3 col-xs-3 col-form-label" for="newTime">
+                                Time:
+                            </label>
+                            <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9">
+                                <input class="form-control" type="time" id="newTime">
+                                <div id="err_time" class="text-danger"></div>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-lg-3 col-md-3 col-sm-3 col-xs-3 col-form-label" for="newDesc">
+                                Description:
+                            </label>
+                            <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9">
+                                <input class="form-control" type="text" id="newDesc">
+                                <div id="err_desc" class="text-danger"></div>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                                <label class="col-lg-3 col-md-3 col-sm-3 col-xs-3 col-form-label" for="newHelp">
+                                    How-to page:
+                                </label>
+                                <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9">
+                                    <input class="form-control" type="text" id="newHelp">
+                                </div>
+                            </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button id="addAction" type="button" class="btn btn-primary">Add</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row text-center">
+            <h1 class="text-center">Create Checklist</h1>
+            <br />
+            <button type="button" class="btn btn-lg btn-primary" data-dismiss="modal" data-toggle="modal" data-target="#newAction">Add Action</button>
+            <button type="button" class="btn btn-lg btn-success" id="complete">Complete</button>
+            <hr />
+        </div>
+        <div id="mainDiv"></div>
+    </div>
+</body>
+</html>
